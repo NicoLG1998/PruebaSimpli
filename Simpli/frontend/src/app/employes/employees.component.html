@@ -1,0 +1,17 @@
+<div>
+    <h2>Employees</h2>
+    <ul>
+      <li *ngFor="let employee of employees">
+        {{ employee.nombre }} - {{ employee.rut }} - {{ employee.email }} - {{ employee.empresa }}
+      </li>
+    </ul>
+  
+    <form (ngSubmit)="addEmployee(nombre.value, rut.value, email.value, empresa.value)">
+      <input #nombre placeholder="Nombre">
+      <input #rut placeholder="RUT">
+      <input #email placeholder="Email">
+      <input #empresa placeholder="Empresa">
+      <button type="submit">Add Employee</button>
+    </form>
+  </div>
+  

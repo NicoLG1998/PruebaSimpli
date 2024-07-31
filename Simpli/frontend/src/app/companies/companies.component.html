@@ -1,0 +1,14 @@
+<div>
+    <h2>Companies</h2>
+    <ul>
+      <li *ngFor="let company of companies">
+        {{ company.name }}
+      </li>
+    </ul>
+  
+    <form (ngSubmit)="Agregar Empresa(name.value)">
+      <input #name placeholder="Nombre de la Empresa">
+      <button type="submit">Add Company</button>
+    </form>
+  </div>
+  
